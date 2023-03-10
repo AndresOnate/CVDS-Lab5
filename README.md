@@ -101,3 +101,75 @@ como host ‘localhost’,como puerto, elconfigurado en el pom.xml y el path deb
 un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
 
 ![image](https://user-images.githubusercontent.com/63562181/224201908-09934dc5-9353-4919-b66b-d8a594dfb65e.png)
+
+7. Busque el artefacto gson en el repositorio de maven y agregue la dependencia.
+```
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+
+```
+8. En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del path de la url.
+
+![image](https://user-images.githubusercontent.com/63562181/224213702-fc1348d3-1dd1-4fc2-a203-aadcc2ae3e9f.png)
+
+9. Basado en la respuesta que le da el servicio del punto anterior,cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y
+los métodos getter y setter para las propiedades de los"To Dos" que se encuentran en la url indicada.
+```
+package edu.eci.cvds.servlet.model;
+
+public class Todo{
+
+    private int userId;
+    private int id;
+    private String title;
+    private boolean completed;
+
+    public Todo(){
+    }
+
+    public int getUserId(){
+        return userId;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public String getTitle{
+        return title;
+    }
+
+    public boolean getCompleted{
+        return completed;
+
+    }
+
+    public void setUserId(int userId){
+        this.userId = userId;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public void setCompleted(boolean completed){
+        this.completed = completed;
+
+    }
+
+}
+```
+10. Utilice la siguiente clase para consumir el servicio que se encuentra en la dirección url del punto anterior:
+
+![image](https://user-images.githubusercontent.com/63562181/224216581-29894f98-c80a-4632-8c38-696f9115f2da.png)
+
+11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la
+anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de lassuperclases.

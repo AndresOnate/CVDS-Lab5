@@ -18,11 +18,11 @@ public class Todo{
         return id;
     }
 
-    public String getTitle{
+    public String getTitle(){
         return title;
     }
 
-    public boolean getCompleted{
+    public boolean getCompleted(){
         return completed;
 
     }

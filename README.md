@@ -170,3 +170,6 @@ public class Todo{
 10. Utilice la siguiente clase para consumir el servicio que se encuentra en la dirección url del punto anterior:
 
 ![image](https://user-images.githubusercontent.com/63562181/224216581-29894f98-c80a-4632-8c38-696f9115f2da.png)
+
+11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la
+anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de lassuperclases.

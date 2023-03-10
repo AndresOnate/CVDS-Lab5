@@ -173,6 +173,11 @@ public class Todo{
 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la
 anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de lassuperclases.
 
+12. Para indicar en qué URL elservlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la
+propiedad urlPatterns, indicando la URL (que usted defina) a la cualse asociará elservlet.
+
+13. Teniendo en cuenta lassiguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet:
+
 ```
 package edu.eci.cvds.servlet;
 
@@ -229,3 +234,5 @@ public class Servlet extends HttpServlet{
     }
 }
 ```
+14. Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
+
